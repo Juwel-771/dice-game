@@ -1,0 +1,22 @@
+import React from 'react';
+import './Home.css'
+import dice from '../images/dices.png'
+import Buttons from './Buttons';
+
+
+
+const Home = () => {
+    return (
+        <section className='home_container'>
+            <div className='dice_img'>
+                <img src={dice} alt="" />
+            </div>
+            <div>
+                <p className='dice_name'>DICE GAME</p>
+                <Buttons name = "Play Dice"></Buttons>
+            </div>
+        </section>
+    );
+};
+
+export default Home;

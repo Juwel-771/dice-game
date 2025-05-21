@@ -1,0 +1,19 @@
+.home_container{
+    max-width: full;
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dice_img img {
+    width: 500px;
+    height: 430px;
+}
+
+.dice_name {
+    font-family: 'poppins';
+    font-size: 96px;
+    font-weight: bolder;
+}
