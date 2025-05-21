@@ -9,6 +9,18 @@ const Button = styled.button `
     padding: 10px;
     border-radius: 8px;
     font-family: 'poppins';
+    font-size: 16px;
+    border: 1px solid transparent;
+    transition: 0.2s background ease-in;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        transition: 0.2s background ease-in;
+    }
 `
 
 
