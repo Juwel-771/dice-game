@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.css'
-import dice from '../images/dices.png'
 import dice_img from '/images/dicesTwo.png'
 import Buttons from './Buttons';
 
