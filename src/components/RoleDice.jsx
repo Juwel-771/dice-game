@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const DiceContainer = styled.div`
@@ -17,10 +17,22 @@ const DiceContainer = styled.div`
 
 
 const RoleDice = () => {
+
+    const [currentDice, setCurrentDice] = useState(1);
+    
+    const generateRandomNumber = (min, max) => {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    const roleDice = () => {
+        const randomNumber = generateRandomNumber(1, 7);
+        setCurrentDice(randomNumber);
+    }
+
     return (
         <DiceContainer>
-            <div className='dice'>
-                <img src="images/dice/dice_1.png" alt="Dice" />
+            <div className='dice' onClick={roleDice}>
+                <img src={`images/dice/dice_${currentDice}.png`} alt="Dice" />
             </div>
              <p>Click Dice to Roll</p>
         </DiceContainer>
