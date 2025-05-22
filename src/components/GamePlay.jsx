@@ -4,6 +4,7 @@ import TotalScore from './TotalScore';
 import NumberSelector from './NumberSelector';
 import styled from 'styled-components';
 import RoleDice from './RoleDice';
+import Buttons from './Buttons';
 
 const MainContainer = styled.main`
     padding-top: 70px;
@@ -11,6 +12,19 @@ const MainContainer = styled.main`
         display: flex;
         justify-content: space-around;
         align-items: end;
+    }
+
+    .bottom-btn {
+        margin: 40px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bottom-btn button {
+        border: 0px;
     }
 `
 
@@ -43,6 +57,10 @@ const GamePlay = () => {
         setSelectedNumber(undefined)
     }
 
+    const resetScore = () => {
+        setScore(0);
+    }
+
     return (
         <MainContainer>
             <div className='top-section'>
@@ -55,6 +73,14 @@ const GamePlay = () => {
                 </NumberSelector>
             </div>
             <RoleDice currentDice = {currentDice} roleDice = {roleDice}></RoleDice>
+            <div className='bottom-btn'>
+                <button onClick={resetScore}>
+                    <Buttons name = "Reset"></Buttons>
+                </button>
+                <button>
+                    <Buttons name = "Rules"></Buttons>
+                </button>
+            </div>
         </MainContainer>
     );
 };
