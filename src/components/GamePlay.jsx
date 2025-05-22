@@ -5,9 +5,10 @@ import NumberSelector from './NumberSelector';
 import styled from 'styled-components';
 import RoleDice from './RoleDice';
 import Buttons from './Buttons';
+import Rules from './Rules';
 
 const MainContainer = styled.main`
-    padding-top: 70px;
+    padding-top: 20px;
     .top-section {
         display: flex;
         justify-content: space-around;
@@ -15,9 +16,9 @@ const MainContainer = styled.main`
     }
 
     .bottom-btn {
-        margin: 40px 0px;
+        margin-top: 40px;
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 15px;
         align-items: center;
         justify-content: center;
@@ -33,6 +34,7 @@ const GamePlay = () => {
     const [selectedNumber, setSelectedNumber] = useState(0);
     const [currentDice, setCurrentDice] = useState(1);
     const [error, setError] = useState("");
+    const [showRules, setShowRules] = useState(false);
 
 
        const generateRandomNumber = (min, max) => {
@@ -59,6 +61,11 @@ const GamePlay = () => {
 
     const resetScore = () => {
         setScore(0);
+        setError("");
+    }
+
+    const handleRulesShow = () => {
+        setShowRules(!showRules);
     }
 
     return (
@@ -77,10 +84,11 @@ const GamePlay = () => {
                 <button onClick={resetScore}>
                     <Buttons name = "Reset"></Buttons>
                 </button>
-                <button>
-                    <Buttons name = "Rules"></Buttons>
+                <button onClick={handleRulesShow}>
+                    <Buttons name = {showRules ? "Hide Rules": "Show Rules"}></Buttons>
                 </button>
             </div>
+            {showRules && <Rules></Rules>}
         </MainContainer>
     );
 };

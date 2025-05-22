@@ -17,7 +17,7 @@ const Button = styled.button `
 
     &:hover {
         background-color: white;
-        border: 1px solid black;
+        outline: 1px solid black;
         color: black;
         transition: 0.2s background ease-in;
     }
