@@ -16,16 +16,9 @@ const DiceContainer = styled.div`
 `
 
 
-const RoleDice = ({currentDice, setCurrentDice}) => {
+const RoleDice = ({currentDice, roleDice}) => {
     
-    const generateRandomNumber = (min, max) => {
-        return Math.floor(Math.random() * (max - min) + min);
-    }
-
-    const roleDice = () => {
-        const randomNumber = generateRandomNumber(1, 7);
-        setCurrentDice(randomNumber);
-    }
+ 
 
     return (
         <DiceContainer>
