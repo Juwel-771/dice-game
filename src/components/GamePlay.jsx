@@ -2,8 +2,10 @@ import React from 'react';
 import TotalScore from './TotalScore';
 import NumberSelector from './NumberSelector';
 import styled from 'styled-components';
+import RoleDice from './RoleDice';
 
 const MainContainer = styled.main`
+    padding-top: 70px;
     .top-section {
         display: flex;
         justify-content: space-around;
@@ -18,7 +20,7 @@ const GamePlay = () => {
                 <TotalScore></TotalScore>
                 <NumberSelector></NumberSelector>
             </div>
-            
+            <RoleDice></RoleDice>
         </MainContainer>
     );
 };
