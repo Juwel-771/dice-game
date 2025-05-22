@@ -33,9 +33,7 @@ const NumberSelectorContainer = styled.div `
 
 const arrayNumber = [1,2,3,4,5,6];
 
-const NumberSelector = () => {
-
-    const [selectedNumber, setSelectedNumber] = useState(0);
+const NumberSelector = ({selectedNumber, setSelectedNumber}) => {
 
     return (
         <NumberSelectorContainer>

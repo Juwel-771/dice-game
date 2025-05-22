@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import TotalScore from './TotalScore';
 import NumberSelector from './NumberSelector';
 import styled from 'styled-components';
@@ -14,13 +15,16 @@ const MainContainer = styled.main`
 `
 
 const GamePlay = () => {
+    const [selectedNumber, setSelectedNumber] = useState(0);
+    const [currentDice, setCurrentDice] = useState(1);
+
     return (
         <MainContainer>
             <div className='top-section'>
-                <TotalScore></TotalScore>
-                <NumberSelector></NumberSelector>
+                <TotalScore ></TotalScore>
+                <NumberSelector selectedNumber = {selectedNumber} setSelectedNumber = {setSelectedNumber}></NumberSelector>
             </div>
-            <RoleDice></RoleDice>
+            <RoleDice currentDice = {currentDice} setCurrentDice = {setCurrentDice}></RoleDice>
         </MainContainer>
     );
 };
