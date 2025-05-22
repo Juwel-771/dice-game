@@ -1,10 +1,13 @@
 import React from 'react';
+import TotalScore from './TotalScore';
+import NumberSelector from './NumberSelector';
 
 const GamePlay = () => {
     return (
-        <div>
-            <h2>Now you are in Game Play</h2>
-        </div>
+        <main>
+            <TotalScore></TotalScore>
+            <NumberSelector></NumberSelector>
+        </main>
     );
 };
 
