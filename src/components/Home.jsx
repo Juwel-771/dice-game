@@ -6,7 +6,7 @@ import Buttons from './Buttons';
 
 
 
-const Home = () => {
+const Home = ({toggle}) => {
     return (
         <section className='home_container'>
             <div className='dice_img'>
@@ -14,7 +14,9 @@ const Home = () => {
             </div>
             <div>
                 <h1 className='dice_name'>DICE GAME</h1>
-                <Buttons name = "Play Dice"></Buttons>
+                <button onClick={toggle} style={{border: "none"}}>
+                    <Buttons name = "Play Dice"></Buttons>
+                </button>
             </div>
         </section>
     );
